@@ -29,7 +29,7 @@ function App() {
       layers={[layer]}>
       <Map
        mapStyle={"mapbox://styles/mapbox/light-v10"}    
-       mapboxAccessToken={REACT_MAPBOX_KEY} />
+       mapboxAccessToken={process.env.REACT_MAPBOX_KEY} />
     </DeckGL>
   );
 }
