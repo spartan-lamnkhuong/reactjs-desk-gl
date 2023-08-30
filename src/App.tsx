@@ -21,15 +21,15 @@ function App() {
     bounds: [-122.5190, 37.7045, -122.355, 37.829],
     image: 'https://raw.githubusercontent.com/visgl/deck.gl-data/master/website/sf-districts.png'
   });
-
+  console.log(process.env)
   return (
     <DeckGL
       initialViewState={INITIAL_VIEW_STATE}
       controller={true}
       layers={[layer]}>
       <Map
-       mapStyle={"mapbox://styles/mapbox/light-v10"}    
-       mapboxAccessToken={process.env.REACT_MAPBOX_KEY} />
+       mapStyle={"mapbox://styles/mapbox/light-v10"}
+       mapboxAccessToken={process.env.REACT_APP_MAPBOX_KEY} />
     </DeckGL>
   );
 }
